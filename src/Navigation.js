@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
 // import your route components too
 
@@ -29,7 +30,7 @@ import { ProductDetail } from "./pages/ProductDetail";
 
 
 export const Navigation= () => (
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/companydetail' element={<CompanyDetail/>}/>
@@ -54,6 +55,6 @@ export const Navigation= () => (
         </Routes>
   
     
-    </BrowserRouter>
+    </HashRouter>
 
 ); 
