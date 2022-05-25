@@ -9,7 +9,7 @@ import { PropertyDetailContainer } from "./styles";
 import { PlantCard } from "../Home/components/PlantCard";
 import { Button, SquaredButton } from "../../components/Button";
 
-import { FaEye,FaEyeSlash} from 'react-icons/fa';
+import { FaArrowAltCircleDown,FaArrowAltCircleRight} from 'react-icons/fa';
 
 
 
@@ -46,26 +46,29 @@ return (
                     <PrimaryText>cxxx</PrimaryText>
                 </div>
                 
-            </PropertyDetailContainer>
+            
             <br/>
-            <Title>Jerarquía nivel 2:</Title>          
-                        
-            <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
-                <SquaredButton icon={!visible ? FaEyeSlash:FaEye} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+            <div class="jerarquia_visible">
+                <Title>Jerarquía nivel 2:</Title>                               
+                <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
+                    <SquaredButton icon={!visible ? FaArrowAltCircleRight:FaArrowAltCircleDown} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+                </div>
             </div>
+
             <br/>
-            {!visible  && <PlantCard/>}
-            {!visible  && <PlantCard/>}
-            {!visible  && <PlantCard/>}
+            {!visible  && <PlantCard nombre ="Planta Envigado"/>}
+            {!visible  && <PlantCard nombre ="Planta Bello"/>}
+            {!visible  && <PlantCard nombre ="Planta Rionegro"/>}
 
-
+            <br/>
+            {!visible  && 
             <Button 
                 label="Crear nueva elemento en Jerarquía Nivel 2" 
                 linkTo={"/add-plant"}
-            />
+            />}
              
 
-            
+            </PropertyDetailContainer>
         </Page>
     );
 }

@@ -16,6 +16,7 @@ export const MenuWrapper = styled.div`
         flex:1;
         text-decoration:none;
         height:100%;
+        width:100%;
 
     }
 
@@ -33,6 +34,7 @@ export const MenuWrapper = styled.div`
 
 export const MenuItemWrapper = styled.section`
     border: 1px solid white;
+    width:100%;
     height: 100%;
     flex-direction:column;
     align-items: center;

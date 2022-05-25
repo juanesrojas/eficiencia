@@ -8,10 +8,10 @@ import { SquaredButton } from "../Button";
 import { FaHome,FaArrowLeft,FaAvianex,FaPen } from 'react-icons/fa';
 
 
-export const MacroprocessInfoCard = (PropertyID) =>(
+export const MacroprocessInfoCard = ({nombre}) =>(
 
         <PropertyInfoWrapper>
-            <Title>Macroproceso 1</Title>
+            <Title>{nombre}</Title>
             <div className="icon-container"> <SquaredButton icon={FaPen} link="/propertydetail" />  </div>
 
         </PropertyInfoWrapper>

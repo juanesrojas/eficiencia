@@ -6,10 +6,10 @@ import { MacroprocessInfoCard } from "../../../../components/MacroprocessInfoCar
 import { SubTitle } from "../../../../globalStyles";
 import { ProcessCard } from "../ProcessCard";
 import { Button, SquaredButton } from "../../../../components/Button";
-import { FaEye,FaEyeSlash} from 'react-icons/fa';
+import { FaArrowAltCircleRight,FaArrowAltCircleDown} from 'react-icons/fa';
 
 
-export const MacroprocessCard = () =>{
+export const MacroprocessCard = ({nombre}) =>{
     const [visible, setVisible] = useState(true);
 
     const tooglePasswordVisible = () =>{
@@ -27,14 +27,15 @@ return (
 
 
             <div>
-                <MacroprocessInfoCard/>
+                <MacroprocessInfoCard nombre={nombre}/>
             </div>   
             <br/>
             <div>
-                <SubTitle>Jerarquía Nivel 4</SubTitle>
-
-                <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
-                    <SquaredButton icon={!visible ? FaEyeSlash:FaEye} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+                <div class="jerarquia_visible">
+                    <SubTitle>Jerarquía nivel 4:</SubTitle>                               
+                    <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
+                        <SquaredButton icon={!visible ? FaArrowAltCircleRight:FaArrowAltCircleDown} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+                    </div>
                 </div>
 
                 <br/>
@@ -43,10 +44,11 @@ return (
      
 
                 <br/>
+                {!visible  && 
                 <Button
                 label="Crear nueva elemento en Jerarquía Nivel 4" 
                 linkTo={"/add-process"}
-            />
+                />}
             </div>
         </PropertyCardWrapper>
 

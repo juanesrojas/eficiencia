@@ -30,15 +30,74 @@ export const AddVariable =()=>{
                     <label>Tipo de vatiable</label>
                     <div class="input">
                         <select >
-                            <option value="Apto">Voltaje (V)</option>
-                            <option value="Casa">Corriente (A)</option>
-                            <option value="Local">Potencia (W)</option>
-                            <option value="Lote">Energía Activa (kWh)</option>
-                            <option value="Lote">Energía Reactiva (kWh)</option>
-                            <option value="Lote">Consumo Gas (m3)</option>
+                            <option value="Voltaje">Voltaje (V)</option>
+                            <option value="Corriente">Corriente (A)</option>
+                            <option value="Potencia">Potencia (W)</option>
+                            <option value="Energía">Energía Activa (kWh)</option>
+                            <option value="Reactiva">Potencia Reactiva (kVAr)</option>
+                            <option value="Energía">Energía Reactiva (kVAhr)</option>
+                            <option value="Consumo">Consumo Gas (m3)</option>
+                            <option value="Temperatura">Temperatura (°C)</option>
+                            <option value="on_off">On/Off</option>
+                            <option value="conteo">Conteo (unidades)</option>
+                            <option value="conteo">flujo (litros/seg)</option>
+                            <option value="conteo">flujo (m3/seg)</option>
+                            <option value="conteo">Presión (psi)</option>
                         </select>
                     </div>
                 </FormControl>
+
+                <FormControl>
+                    <label>Unidad de medida</label>
+                    <div class="input">
+                        <select >
+                            <option value="Voltaje">V</option>
+                            <option value="Corriente">A</option>
+                            <option value="Potencia">W</option>
+                            <option value="Energía">kWh</option>
+                            <option value="Reactiva">kVAr</option>
+                            <option value="Energía">kVAhr</option>
+                            <option value="Consumo">m3</option>
+                            <option value="Temperatura">°C</option>
+                            <option value="on_off">On/Off</option>
+                            <option value="conteo">unidades</option>
+                            <option value="conteo">litros/seg</option>
+                            <option value="conteo">m3/seg</option>
+                            <option value="conteo">psi</option>
+                        </select>
+                    </div>
+                </FormControl>
+
+                <FormControl>
+                    <label>Energético Asociado</label>
+                    <div class="input">
+                        <select >
+                            <option value="Energía Eléctrica">Energía Eléctrica</option>
+                            <option value="Gas Natural">Gas Natural</option>
+                        </select>
+                    </div>
+                </FormControl>
+
+                <FormControl>
+                    <label>¿la variable mide el consumo de un energético?</label>
+                    <div class="input">
+                        <select >
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </FormControl>
+
+                <FormControl>
+                    <label>¿El valor es acumulado?</label>
+                    <div class="input">
+                        <select >
+                            <option value="Acumulado">Acumulado</option>
+                            <option value="Instantaneo">Instantaneo</option>
+                        </select>
+                    </div>
+                </FormControl>
+
 
                 <FormControl>
                     <label>Factor multiplicador</label>
@@ -46,6 +105,29 @@ export const AddVariable =()=>{
                         <input type="number"/>
                     </div>
                 </FormControl>
+
+                <FormControl>
+                    <label>SetPoint</label>
+                    <div class="input">
+                        <input type="number"/>
+                    </div>
+                </FormControl>
+
+                <FormControl>
+                    <label>Umbral máximo</label>
+                    <div class="input">
+                        <input type="number"/>
+                    </div>
+                </FormControl>
+
+                <FormControl>
+                    <label>Umbral mínimo</label>
+                    <div class="input">
+                        <input type="number"/>
+                    </div>
+                </FormControl>
+
+
 
                 <FormControl>
                     <label>Link a BD</label>

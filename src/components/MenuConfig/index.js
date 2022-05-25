@@ -27,7 +27,7 @@ const CustomerMenuItems = [
 const AdminConfigItems = [
     {
         icon: FaHome,
-        label: 'xxx',
+        label: 'Inicio',
         path: '/'
     },
 
@@ -41,7 +41,7 @@ const AdminConfigItems = [
 
     {
         icon: FaUserAlt,
-        label: 'yyy',
+        label: 'Usuario',
         path: '/account'
     }
 

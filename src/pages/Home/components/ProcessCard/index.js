@@ -7,7 +7,7 @@ import { SubTitle } from "../../../../globalStyles";
 import { ProcessInfoCard } from "../../../../components/ProcessInfoCard";
 import { DeviceCard } from "../DeviceCard";
 import { Button, SquaredButton } from "../../../../components/Button";
-import { FaEye,FaEyeSlash} from 'react-icons/fa';
+import {FaArrowAltCircleRight,FaArrowAltCircleDown} from 'react-icons/fa';
 
 
 export const ProcessCard = () =>{
@@ -32,10 +32,12 @@ return (
             </div>   
             <br/>
             <div>
-                <SubTitle>Equipos asociados al proceso</SubTitle>
 
-                <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
-                    <SquaredButton icon={!visible ? FaEyeSlash:FaEye} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+                <div class="jerarquia_visible">
+                    <SubTitle>Equipos asociados al proceso:</SubTitle>                               
+                    <div class="pswViewContainer" style={{"flex":"1","display":"flex","align-items":"center","justify-content":"center"}}>
+                        <SquaredButton icon={!visible ? FaArrowAltCircleRight:FaArrowAltCircleDown} color={"#4A148C"}  link="" funct={tooglePasswordVisible}/>
+                    </div>
                 </div>
 
                 <br/>
@@ -44,10 +46,11 @@ return (
          
 
                 <br/>
+                {!visible  && 
                 <Button
                 label="Configurar nuevo equipo" 
                 linkTo={"/add-device"}
-            />
+                />}
             </div>
         </PropertyCardWrapper>
 

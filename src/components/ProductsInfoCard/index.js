@@ -8,13 +8,11 @@ import { SquaredButton } from "../Button";
 import { FaHome,FaArrowLeft,FaAvianex,FaPen } from 'react-icons/fa';
 
 
-export const PlantInfoCard = ({nombre}) =>(
+export const ProductsInfoCard = (PropertyID) =>(
 
         <PropertyInfoWrapper>
-            <Title>{nombre}</Title>
-            <SecondaryText>Dirección: xxxx</SecondaryText>
-            <SecondaryText>Área: xxx</SecondaryText>
-            <div className="icon-container"> <SquaredButton icon={FaPen} link="/propertydetail" />  </div>
+            <Title>Producto ABC</Title>
+            <div className="icon-container"> <SquaredButton icon={FaPen} link="/product-detail" />  </div>
 
         </PropertyInfoWrapper>
 
