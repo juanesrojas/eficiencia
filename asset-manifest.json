@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/eficiencia/static/js/main.23f65e0f.js",
+    "static/media/profile_picture.png": "/eficiencia/static/media/profile_picture.e49dda644286be36c189.png",
+    "index.html": "/eficiencia/index.html",
+    "main.23f65e0f.js.map": "/eficiencia/static/js/main.23f65e0f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.23f65e0f.js"
+  ]
+}
